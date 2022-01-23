@@ -9,9 +9,11 @@ criptografar.addEventListener("click", function(e) {
     if (!message) {
         alert("Por favor digite uma mensagem")
     }
-
+    
     const texto = message.value.toLowerCase();
-
+    if (texto.indexOf("ufat") || texto.indexOf("imes") || texto.indexOf("enter") || texto.indexOf("ober") || texto.indexOf("ai")) {
+        alert("Essa mensagem ja esta criptograda, tente descriptografar")
+    }
     let fraseCripto = "";
 
     for (let i = 0; i < texto.length; i++) {
@@ -48,7 +50,9 @@ descriptografar.addEventListener("click", function(e) {
         alert("Por favor digite uma mensagem")
     }
     let texto = message.value.toLowerCase();
-    
+    if (texto.indexOf("ufat") || texto.indexOf("imes") || texto.indexOf("enter") || texto.indexOf("ober") || texto.indexOf("ai")) {
+        alert("Essa mensagem não esta criptograda, tente criptografar")
+    }
     message.value = ""
 
     for(let i = 0; i < texto.length; i++) {
