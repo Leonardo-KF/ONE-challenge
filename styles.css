@@ -1,0 +1,84 @@
+.header-main {
+  background-color: rgb(55, 96, 233) !important;
+}
+
+body {
+  background-color: rgb(32, 34, 39);
+}
+
+.header-content {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+footer {
+  background-color: rgb(55, 96, 233);
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 15px;
+}
+
+.link-repositorio {
+  text-decoration: none;
+  color: rgb(0, 247, 255);
+}
+
+.title-field {
+  color: rgb(0, 247, 255);
+}
+
+h1 {
+  color: rgb(0, 247, 255);
+}
+
+.name-app {
+  color: rgb(0, 247, 255) !important;
+}
+
+.all-fields {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.inputs {
+  padding: 30px;
+  border: 2px solid rgb(55, 96, 233);
+  width: 500px;
+  margin: 20px;
+  border-radius: 5%;
+}
+
+.area-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.field-text {
+  background-color: rgb(54, 57, 65);
+  width: 100%;
+  color: rgb(0, 247, 255);
+  margin: 5px 0 5px 0;
+  padding: 5px;
+  border: transparent;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  color: rgb(0, 247, 255);
+}
+
+.btn-cript {
+  background-color: rgb(54, 57, 65);
+  border-color: rgb(55, 96, 233);
+  border-radius: 10px;
+  color: rgb(0, 247, 255);
+  padding: 4px;
+  margin-right: 10px;
+}
