@@ -6,7 +6,7 @@ const campoResultado = document.getElementById("result-message");
 
 criptografar.addEventListener("click", function (e) {
   e.preventDefault();
-  if (!message) {
+  if (!message.value) {
     alert("Por favor digite uma mensagem");
   }
 
@@ -24,7 +24,9 @@ criptografar.addEventListener("click", function (e) {
     let fraseCripto = "";
 
     for (let i = 0; i < texto.length; i++) {
-      if (texto[i] === "a") {
+      if (!isNaN(texto[i])) {
+        throw alert("A Mensagem esta invalida, por favor tente novamente");
+      } else if (texto[i] === "a") {
         fraseCripto += "ai";
       } else if (texto[i] === "e") {
         fraseCripto += "enter";
@@ -58,20 +60,23 @@ descriptografar.addEventListener("click", function (e) {
   }
   let texto = message.value.toLowerCase();
 
-  console.log(texto.indexOf("enter"));
+
 
   if (
-    texto.indexOf("ufat") !== 1 &
-    texto.indexOf("imes") !== 1 &
-    texto.indexOf("enter") !== 1 &
-    texto.indexOf("ober") !== 1 &
-    texto.indexOf("ai") !== 1
+    (texto.indexOf("ufat") !== 1) &
+    (texto.indexOf("imes") !== 1) &
+    (texto.indexOf("enter") !== 1) &
+    (texto.indexOf("ober") !== 1) &
+    (texto.indexOf("ai") !== 1)
   ) {
     alert("Essa mensagem ja esta descriptografada, tente criptografar");
   } else {
     message.value = "";
 
     for (let i = 0; i < texto.length; i++) {
+      if (!isNaN(texto[i])) {
+        throw alert("A Mensagem esta invalida, por favor tente novamente");
+      }
       texto = texto.replace("ai", "a");
       texto = texto.replace("enter", "e");
       texto = texto.replace("imes", "i");
